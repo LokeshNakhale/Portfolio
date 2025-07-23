@@ -1,0 +1,327 @@
+#Home4{
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0909;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    flex-direction: column;
+
+}
+#button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+}
+.project{
+    
+    width: 590px;
+    height: 280px;
+    /* background-color: bisque; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid white;
+    /* display: none; */
+
+     opacity: 0;
+  /* transform: translateY(50px);  */
+  transition: all 1s ease-in-out;
+    
+}
+.projectShow {
+  opacity: 1;
+  animation: blinkEffect 0.7s ease-out 1;
+  box-shadow: 0 0 10px #a200ff, 0 0 20px #a200ff, 0 0 30px #a200ff;
+}
+
+@keyframes blinkEffect {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+.project .p-btn {
+    width: 590px;
+    height: 280px;
+    background-color: rgba(0, 0, 0, 0.888);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.4s ease-in;
+
+    
+    box-shadow:
+        inset 2px -2px 30px rgba(128, 0, 128, 0.522),
+        inset -2px 2px 40px rgba(186, 85, 211, 0.679),
+        inset 0 0 80px rgba(255, 0, 255, 0.459);
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project:hover .p-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Purple smoke puff animation */
+.project .p-btn::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: purple; /* light purple */
+    box-shadow: 0 0 20px 10px rgba(186, 85, 211, 0.2); /* glow */
+    border-radius: 50%;
+    transform: translateX(-50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project:hover .p-btn::after {
+    opacity: 1;
+    animation: smokeFloat 1.6s ease-out forwards infinite;
+}
+
+@keyframes smokeFloat {
+    0% {
+        top: 100%;
+        transform: translateX(-50%) scale(0.6);
+        opacity: 0.3;
+    }
+    50% {
+        top: 50%;
+        opacity: 0.5;
+    }
+    100% {
+        top: -30%;
+        transform: translateX(-50%) scale(2);
+        opacity: 0;
+    }
+}
+/* _______________________________________________ */
+.p-btn a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: purple;
+    /* color: purple; */
+   
+}
+
+.project .P-img{
+   width: 590px;
+    height: 280px;
+   
+}
+.project .P-img img{
+    width: 590px;
+    height: 280px;
+    object-fit: contain;
+   
+}
+
+
+/* -----indside button------- */
+
+.p-btn a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 1.5vw;
+  background-color: purple;
+  font-family: sans-serif;
+  overflow: hidden;
+  transition: 0.3s  ease-in-out ;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.7), 0 0 30px rgba(128, 0, 128, 0.3);
+}
+
+.p-btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+
+.p-btn a:hover::before {
+  left: 100%;
+  opacity: 1;
+}
+
+.p-btn a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  
+  box-shadow: 0 0 10px 6px rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transform: translateX(-50%) scale(1);
+  animation: smoke 1.4s ease-out forwards;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.p-btn a:hover::after {
+  opacity: 1;
+  animation: smoke 1.4s ease-out forwards ;
+
+}
+/* button   ______________________ */
+#button {
+  padding: 20px 50px;
+  font-size: 2.5vw;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: white;
+  background-color: rgba(128, 0, 128, 0.823); /* subtle purple background */
+  border: 2px solid rgba(186, 85, 211, 0.4);
+  border-radius: 12px;
+  position: absolute;
+  top: 43%;
+  left: 40%;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow:
+    0 0 10px rgba(128, 0, 128, 0.6),
+    0 0 20px rgba(186, 85, 211, 0.563),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+  transition: all 0.4s ease-in-out;
+  
+}
+
+#button:hover {
+  background-color: rgba(186, 85, 211, 0.77);
+  box-shadow:
+    0 0 15px rgba(128, 0, 128, 0.8),
+    0 0 30px rgba(186, 85, 211, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  letter-spacing: 1px;
+  
+}
+
+@keyframes smoke {
+  0% {
+    top: 100%;
+    transform: translateX(-50%) scale(0.4);
+    opacity: 0.3;
+  }
+  50% {
+    top: 50%;
+    opacity: 0.6;
+  }
+  100% {
+    top: -40%;
+    transform: translateX(-50%) scale(2.5);
+    opacity: 0;
+  }
+}
+@media (max-width:480px) {
+  .project{
+    
+    width: 250px;
+    height: 180px;
+    /* background-color: bisque; */
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 12px; */
+    
+}
+#Home4{
+    width: 100%;
+    height: 60vh;
+    
+
+}
+.project .p-btn {
+    width: 250px;
+    height: 120px;
+    top: 19%;
+    border-radius: 1px;
+   
+}
+.project .P-img{
+   width: 250px;
+    height: 180px;
+   
+}
+.project .P-img img{
+    width: 250px;
+    height: 180px;
+    object-fit: contain;
+   
+}
+
+#button{
+  left: 30%;
+  top: 45%;
+}
+}
+
+
+/* -------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project {
+    width: 420px;
+    height: 240px;
+  }
+
+  .project .p-btn {
+    width: 420px;
+    height: 160px;
+    top: 15%;
+  }
+
+  .project .P-img,
+  .project .P-img img {
+    width: 420px;
+    height: 240px;
+  }
+
+  #button {
+    left: 38%;
+    top: 40%;
+  }
+}

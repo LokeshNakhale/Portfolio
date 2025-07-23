@@ -1,0 +1,103 @@
+#home3{
+    width: 100%;
+    min-height: 100vh;
+    font-family: monospace;
+    background-color: #0B0909;
+    padding: 0 8px;
+}
+#skill{
+    color:#BF00FF;
+    text-align: center;
+    font-size: 3.5vw;
+    background-color: #0B0909;
+    /* border-top: 2px solid white; */
+    border-bottom: 2px solid white;
+    font-family: monospace;
+}
+.skill{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 15px;
+    
+    position: relative;
+    border-bottom: 1px solid white;;
+    color: white;
+
+}
+.skill-img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: all ease 0.8s;
+}
+
+.skill:hover .skill-img{
+    opacity: 1;
+      transform: translateY(6%);
+}
+.skill-img img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.skill h2{
+    font-size: 3vw;
+    opacity: 1;
+  
+  
+     transition: all 0.3s ease;
+}
+.skill:nth-child(odd) h2 {
+  color: whitesmoke;
+}
+
+.skill:nth-child(even) h2 {
+  color:#BF00FF;
+}
+
+.skill:hover h2 {
+    opacity: 1;
+      transform: translateX(30%);
+      width: 60%;
+}
+
+.skill span{
+    font-size: 2vw;
+}
+@media (max-width:480px) {
+    .skill h2{
+    font-size: 4.3vw;
+   
+}
+.skill span{
+    font-size: 3vw;
+}
+
+.skill-img{
+    width: 70px;
+    height: 70px;
+   
+}
+
+.skill-img img{
+    width: 70px;
+    height: 70px;
+  
+    object-fit: cover;
+}
+#home3{
+    width: 100%;
+    min-height: 60vh;
+    
+}
+}
+@media (max-width: 768px) {
+     #home3{
+    width: 100%;
+    min-height: 60vh;
+    
+}
+}

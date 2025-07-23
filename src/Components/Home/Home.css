@@ -1,0 +1,139 @@
+#home{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+}
+#right{
+    width:35% ;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: start;
+    align-items:center ;
+}
+#home-img{
+    width: 300px;
+    height:300px ;
+    /* background-color: red; */
+}
+#home-img img{
+  width: 300px;
+    height:300px ;
+    object-fit: cover;
+}
+
+#T-text-cont{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    perspective: 2000px;
+    font-family: monospace;
+}
+
+.text{
+  /* background-color: gray; */
+  width: fit-content;
+ 
+}
+.text h1{
+    font-size: 5.4vw;
+    
+}
+.text h3{
+    font-size: 2.4vw;
+}
+.text p{
+    font-size: 1.4vw;
+}
+
+
+/* Tablet (<=768px) */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse;
+    align-items: center;
+    
+    
+  }
+  #right{
+     height: 65%;
+  }
+
+  #home-img{
+    width: 250px;
+    height:250px ;
+    /* background-color: red; */
+}
+#home-img img{
+  width: 250px;
+    height:250px ;
+    object-fit: cover;
+}
+#right, #T-text-cont {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  #T-text-cont{
+  align-items: start;
+ }
+ .text h1 {
+    font-size: 7vw;
+  }
+  .text span{
+    color: purple;
+  }
+  .text h3 {
+    font-size: 4.5vw;
+  }
+  
+  .text p {
+    font-size: 3.5vw;
+  }
+}
+
+/*______________________________________________________ Mobile (<=480px) */
+@media (max-width: 480px) {
+  #home {
+    padding: 10px;
+    height: 46vh;
+  }
+  #right{
+     height: 55%;
+  }
+  #home-img{
+    width: 180px;
+    height:180px ;
+    background-color: red;
+}
+  #home-img img{
+  width: 180px;
+    height:180px ;
+    object-fit: cover;
+}
+#right, #T-text-cont {
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #T-text-cont {
+  justify-content: start;
+  }
+  #home-img {
+    max-width: 200px;
+  }
+  .text h1 {
+    font-size: 8vw;
+  }
+.text h3 {
+    font-size: 5vw;
+  }
+  .text p {
+    font-size: 4vw;
+  }
+}
