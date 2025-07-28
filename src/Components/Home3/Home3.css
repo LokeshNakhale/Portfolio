@@ -48,7 +48,7 @@
     opacity: 1;
   
   
-     transition: all 0.3s ease;
+     transition: all 0.5s ease;
 }
 .skill:nth-child(odd) h2 {
   color: whitesmoke;
@@ -60,7 +60,7 @@
 
 .skill:hover h2 {
     opacity: 1;
-      transform: translateX(30%);
+      transform: translateX(28%);
       width: 60%;
 }
 
@@ -80,6 +80,11 @@
     width: 70px;
     height: 70px;
    
+}
+.skill:hover h2 {
+    opacity: 1;
+      transform: translateX(40%);
+      width: 60%;
 }
 
 .skill-img img{

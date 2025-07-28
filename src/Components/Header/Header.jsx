@@ -7,9 +7,9 @@ const Header = () => {
                <img src="" alt="" />
                 <div class="nav-right">
                     <a href="">About Me</a>
-                    <a href="">Skill</a>
-                    <a href="">Portfolio</a>
                     <a style={{color:'#BF00FF'}}  href="">Contact Me</a>
+                    <a href="">Skill</a>
+                    {/* <a href="">Portfolio</a> */}
                 </div>
             </div>
     </div>
